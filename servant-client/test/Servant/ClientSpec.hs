@@ -51,7 +51,9 @@ import           Servant.Server
 import           Servant.Server.Experimental.Auth
 
 spec :: Spec
-spec = describe "Servant.Client" $ do
+spec = do
+  runIO buildTestServer
+  describe "Servant.Client" $ do
     sucessSpec
     failSpec
     basicAuthSpec
