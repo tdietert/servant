@@ -1,8 +1,8 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 set -o errexit
 
-loc=$(pwd)/$(dirname $0)
+loc=$(dirname $0)
 cd $loc
 
 npm install xhr2
